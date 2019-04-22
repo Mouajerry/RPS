@@ -1,14 +1,14 @@
-// Initialize Firebase
 var config = {
     apiKey: "AIzaSyB2jtmR1lMfAxWNesqt8WBkTJVXXE9PQRY",
     authDomain: "paper-rock-scissor.firebaseapp.com",
     databaseURL: "https://paper-rock-scissor.firebaseio.com",
     projectId: "paper-rock-scissor",
     storageBucket: "paper-rock-scissor.appspot.com",
+    messagingSenderId: "17557113302"
   };
   
   firebase.initializeApp(config);
-  
+
   var database = firebase.database();
   var chatData = database.ref("/chat");
   var playersRef = database.ref("players");
@@ -22,7 +22,6 @@ var config = {
   var playerOneData = null;
   var playerTwoData = null;
   
-  // USERNAME LISTENERS
   // Start button - takes username and tries to get user in game
   $("#start").click(function() {
     if ($("#username").val() !== "") {
